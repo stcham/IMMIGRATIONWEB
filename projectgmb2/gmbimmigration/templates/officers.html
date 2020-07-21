@@ -1,0 +1,73 @@
+{% extends "layout.html"%}
+{% block body %}
+
+<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .btncontainer {
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    input:hover {
+      background-color: transparent;
+    }
+    select:hover {
+      background-color: transparent;
+    }
+    h1 {
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+   
+
+</style>
+
+<center>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+  <h2>immigration officers</h2>
+  <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 ">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<table class="table table-striped table-dark table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">username</th>
+      <th scope="col">address</th>
+      <th scope="col">Department</th>
+      <th scope="col">phone_number</th>
+      <th class="text-right">ACTION</th>
+
+    </tr>
+  </thead>
+  {% for row in officer %}
+  <tbody>
+    <tr>
+      <th scope="row">{{row.0}}</th>
+      <td>{{row.1}}</td>
+      <td>{{row.2}}</td>
+      <td>{{row.3}}</td>
+      <td>{{row.5}}</td>
+      <td>{{row.6}}</td>
+      <td>{{row.7}}</td>
+      <td class="text-right">
+          <button class="btn btn-primary badge-pill">EDIT</button>
+          <button class="btn btn-danger badge-pill">DELETE</button>
+      </td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+{%endblock%}

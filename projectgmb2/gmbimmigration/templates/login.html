@@ -1,0 +1,58 @@
+{% extends "layout.html"%}
+{% block body %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(90deg, red, blue, green);   
+    }
+    .box {  
+        background: rgba(44,62,80,0.7);
+        padding: 40px;
+        width: 250px;
+        height: 400px;
+        margin: auto;
+        text-align: center;    
+    }
+    
+    
+    h1 {
+        text-align: center;
+        margin: 25px 0px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+    input {
+        height: 40px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ffffff;
+        width: 100%;
+        background: transparent;
+        text-align: center;
+        
+    }
+    input::placeholder {
+        color: #ffffff;
+    }
+
+</style>
+
+<section>
+    <div class="box">
+        <h1>Login</h1>
+        <form action="" method="POST">
+            
+            <div class="input">
+                <input type="text" name="username" placeholder="USERNAME" required>
+            
+                <input type="password" name="password" placeholder="PASSWORD" required>
+            </div>
+            
+            <button class="btn btn-danger" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+{%endblock%}

@@ -1,0 +1,120 @@
+{% extends "layout.html"%}
+{% block body %}
+
+<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .btncontainer {
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    input:hover {
+      background-color: transparent;
+    }
+    select:hover {
+      background-color: transparent;
+    }
+    h1 {
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+    h2 {
+      color:yellowgreen;
+      text-transform: uppercase;
+    }
+   
+
+</style>
+<center>
+<h2 id="officers">REGISTER AN OFFICER</h2>
+<form class="needs-validation" novalidate action="" method="POST">
+    <div class="form-col">
+      <div class="col-md-5 mb-4">
+        <input type="text" name="fname" class="form-control" id="validationCustom01" placeholder="First Name" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-5 mb-4">
+        <input type="text" name="lname" class="form-control" id="validationCustom02" placeholder="Last Name" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-5 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">GMB</span>
+          </div>
+          <input type="text" name="username" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please enter a valid username.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-col">
+        <div class="col-md-5 mb-4">
+          <input type="password" name="password" class="form-control" id="validationCustom03" placeholder="Password" required>
+          <div class="invalid-feedback">
+            Please provide a password
+          </div>
+        </div>
+    <div class="form-col">
+      <div class="col-md-5 mb-4">
+        <input type="text" name="address" class="form-control" id="validationCustom03" placeholder="Address" required>
+        <div class="invalid-feedback">
+          Please provide a valid address
+        </div>
+      </div>
+      <div class="col-md-5 mb-4">
+        <select name="role" class="custom-select"  id="validationCustom04" aria-placeholder="Department" required>
+          <option>admin</option>
+          <option>idcard</option>
+          <option>passport</option>
+          <option>permit</option>
+          <option>visa</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select the Department.
+        </div>
+      </div>
+      <div class="col-md-5 mb-4">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">+220</span>
+            </div>
+        <input type="text" name="phone_number" class="form-control" id="validationCustom05" placeholder="Phone number" required>
+        <div class="invalid-feedback">
+          Please provide a valid phone number.
+        </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">REGISTER THE OFFICER</button>
+  </form>
+</center>
+
+   <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script> 
+{%endblock%}

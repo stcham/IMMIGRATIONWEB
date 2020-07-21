@@ -1,0 +1,89 @@
+{% extends "layout.html"%}
+{% block body %}
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(90deg,green,blue,red);
+
+    }
+    h1 {
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        text-decoration: dotted;
+        margin-top: 10px;
+    }
+    .card {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-width: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .card-deck {
+        margin-left: 50px;
+    }
+    .card-header{
+        background-color: darkslategrey;
+        color: floralwhite;
+    }
+    
+</style>
+
+<center>
+<div class="card">
+    <h5 class="card-header">ONLINE FILLING WITH THE GAMBIA IMMIGRATION DEPARTMENT</h5>
+    <div class="card-body">
+      <h5 class="card-title">Application</h5>
+      <p class="card-text">Apply for your national ID or Passport if you are a Gambian and Residence permit or visa if you are not a Gambian</p>
+      <a href="http://accessgambia.com/extra/passports-2.html" class="btn btn-primary">See More</a>
+    </div>
+  </div>
+</center>
+<div class="card-deck ">
+<div class="row">
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      ID CARD
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Registration</li>
+      <li class="list-group-item">Login</li>
+      <li class="list-group-item">Birth certificate</li>
+    </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      PASSPORT
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Registration</li>
+        <li class="list-group-item">Login</li>
+        <li class="list-group-item">ID or Voters Card</li>
+    </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      PERMIT
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Registration</li>
+        <li class="list-group-item">Login</li>
+        <li class="list-group-item">Your countries ID</li>
+    </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      VISA
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Registration</li>
+        <li class="list-group-item">Login</li>
+        <li class="list-group-item">Copy of passport</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+{%endblock%}
